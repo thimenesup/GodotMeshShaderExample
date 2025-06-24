@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://rashn6cqwgeh"]
 
-[ext_resource type="Script" path="res://test_mesh_shader.gd" id="1_hgaes"]
-[ext_resource type="RDShaderFile" uid="uid://cf18d8kx74bt7" path="res://mesh.glsl" id="2_ee43c"]
-[ext_resource type="RDShaderFile" uid="uid://0fgtgxfuy6qm" path="res://mesh_task.glsl" id="2_pyvk6"]
-[ext_resource type="RDShaderFile" uid="uid://dbolfvopjjlmv" path="res://fragment.glsl" id="3_v7s7c"]
+[ext_resource type="Script" uid="uid://b751rvcose2d1" path="res://test_mesh_shader.gd" id="1_hgaes"]
+[ext_resource type="RDShaderFile" uid="uid://cctu0klm7vlhp" path="res://mesh.glsl" id="2_ee43c"]
+[ext_resource type="RDShaderFile" uid="uid://cnva1jy05hv5i" path="res://mesh_task.glsl" id="2_pyvk6"]
+[ext_resource type="RDShaderFile" uid="uid://clskt117vivvl" path="res://fragment.glsl" id="3_v7s7c"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_jj3gx"]
 

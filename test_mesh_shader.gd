@@ -174,16 +174,13 @@ func _process(_delta: float) -> void:
 		put_projection(_stream, projection_view)
 		_rd.buffer_update(_uniform_buffer, 0, _stream.data_array.size(), _stream.data_array)
 	
-	var initial := RenderingDevice.INITIAL_ACTION_CLEAR
-	var final := RenderingDevice.FINAL_ACTION_STORE
 	var clear_colors := PackedColorArray()
 	clear_colors.append(Color(0.2, 0.2, 0.25))
-	var clear_depth := 1.0
 	
 	_stream.clear()
 	put_projection(_stream, Projection($MeshInstance3D.transform))
 	
-	var list := _rd.draw_list_begin(_framebuffer, initial, final, initial, final, clear_colors, clear_depth)
+	var list := _rd.draw_list_begin(_framebuffer, RenderingDevice.DRAW_CLEAR_ALL, clear_colors)
 	_rd.draw_list_bind_render_pipeline(list, _pipeline)
 	_rd.draw_list_bind_uniform_set(list, _uniform_set, 0)
 	_rd.draw_list_set_push_constant(list, _stream.data_array, _stream.data_array.size())
